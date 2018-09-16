@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>흥이난다.</title>
+	<style>
+		#saxoPhone{width:600px; height:400px; background: white; margin: 200px 500px; }
+		#saxoPhone2{width:960px; height: 720px; background: white; margin: 200px 500px; }
+	</style>
+<body>
+	<img src="sax.PNG" id="saxoPhone">
+	<audio id="soundMusic">		
+		<source src="soundMusic.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+		
+		var toggle = "off";
+
+		saxoPhone.onclick = function(){
+			if (toggle == "off") {
+				saxoPhone.setAttribute("src","epic.gif");
+				toggle = "on";
+				soundMusic.play()
+				document.body.style.backgroundColor = "black";
+			}else{
+				saxoPhone.setAttribute("src","sax.PNG");
+				toggle = "off";
+				soundMusic.pause()
+				document.body.style.backgroundColor = "white";
+			}
+
+		}
+	</script>
+</body>
+</html>
